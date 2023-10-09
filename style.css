@@ -517,6 +517,7 @@ html {
     background-color: #fff;
     width: 100%;
     height: 100%;
+    border-bottom: 1px solid #dee2e6;
 }
 
 .wrapper-2 .info {
@@ -596,6 +597,453 @@ html {
     padding: 3px 0;
     font-weight: 400;
     font-size: 19px;
+}
+
+.portfolio {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio .content {
+    text-align: center;
+    position: relative;
+    padding: 90px;
+}
+
+.portfolio .content h1 {
+    font-size: 45px;
+    color: #232F55;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.portfolio .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.portfolio .row .col {
+    flex-basis: 33%;
+    padding: 20px;
+    position: relative;
+}
+
+.portfolio .row .col .img {
+    background-image: url(./stuffs1.jpg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10 px;
+}
+
+.portfolio .row .col .imgg {
+    background-image: url(./stuffs2.jpg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.portfolio .row .col .imga {
+    background-image: url(./stuffs3.jpg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.portfolio .row .col .img::after {
+    content: "";
+    position: absolute;
+    transition: 1s ease-in;
+    background: rgba(255, 68, 149, 0.7);
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+}
+
+.portfolio .row .col .img::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 9, 94, 0.4);
+}
+
+.portfolio .row .col .imgg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 9, 94, 0.4);
+}
+
+.portfolio .row .col .imga::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 9, 94, 0.4);
+}
+
+.portfolio .row .col .imga::after {
+    content: "";
+    position: absolute;
+    transition: 1s ease-in;
+    background: rgba(255, 68, 149, 0.7);
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+}
+
+.portfolio .row .col .imgg::after {
+    content: "";
+    position: absolute;
+    transition: 1s ease-in;
+    background: rgba(255, 68, 149, 0.7);
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+}
+
+.portfolio .row .col .imgg:hover::after {
+    opacity: .2;
+    transition: 0.3s ease-in;
+}
+
+.portfolio .row .col .img:hover::after {
+    opacity: .2;
+    transition: 0.3s ease-in;
+}
+
+.portfolio .row .col .imga:hover::after {
+    opacity: .2;
+    transition: 0.3s ease-in;
+}
+
+.portfolio .row .col .imgg span {
+    width: 23px;
+    height: 23px;
+    color: #fff;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+    border-radius: 30px;
+    margin: 0 auto;
+    top: 80px;
+    left: 180px;
+    position: absolute;
+}
+
+.portfolio .row .col .imgg h4 {
+    text-align: center;
+    position: relative;
+    padding: 100px;
+    color: #fff;
+    font-size: 30px;
+    font-family: sans-serif;
+    letter-spacing: 3px;
+    font-weight: 1000;
+}
+
+.portfolio .row .col .imgg p {
+    font-size: 8px;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 600;
+    position: relative;
+    bottom: 90px;
+    text-align: center;
+}
+
+.portfolio .row .col .imga span {
+    width: 23px;
+    height: 23px;
+    color: #fff;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+    border-radius: 30px;
+    margin: 0 auto;
+    top: 80px;
+    left: 180px;
+    position: absolute;
+}
+
+.portfolio .row .col .imga h4 {
+    text-align: center;
+    position: relative;
+    padding: 100px;
+    color: #fff;
+    font-size: 30px;
+    font-family: sans-serif;
+    letter-spacing: 3px;
+    font-weight: 1000;
+}
+
+.portfolio .row .col .imga p {
+    font-size: 8px;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 600;
+    position: relative;
+    bottom: 90px;
+    text-align: center;
+}
+
+.portfolio .row .col .img span {
+    width: 23px;
+    height: 23px;
+    color: #fff;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+    border-radius: 30px;
+    margin: 0 auto;
+    top: 80px;
+    left: 180px;
+    position: absolute;
+}
+
+.portfolio .row .col .img h4 {
+    text-align: center;
+    position: relative;
+    padding: 100px;
+    color: #fff;
+    font-size: 30px;
+    font-family: sans-serif;
+    letter-spacing: 3px;
+    font-weight: 1000;
+}
+
+.portfolio .row .col .img p {
+    font-size: 8px;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 600;
+    position: relative;
+    bottom: 90px;
+    text-align: center;
+}
+
+.portfolio .row .col h1 {
+    font-family: sans-serif;
+    padding: 5px 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: #232F55;
+}
+
+.sec-tion {
+    background-image: url(./section_bg01.jpg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sec-tion::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 9, 94, 0.4);
+}
+
+.sec-tion .info {
+    text-align: center;
+    padding: 90px 0;
+    position: relative;
+}
+
+.sec-tion .info h1 {
+    text-align: center;
+    position: relative;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.sec-tion .circle-button i {
+    font-size: 40px;
+    background: linear-gradient(to bottom, #ff6d6d 0%, #ff4495 100%);
+    width: max-content;
+    border-radius: 100%;
+    border: 1px solid #fff;
+    position: relative;
+    color: #fff;
+    left: 46.6%;
+    padding: 30px;
+    top: 50px;
+}
+
+.sec-tion .btn {
+    text-align: center;
+    position: relative;
+    padding: 50px 90px;
+}
+
+.sec-tion .btn button {
+    width: 210px;
+    padding: 20px;
+    background-color: #fff;
+    font-family: sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #FF4495;
+}
+
+.sec-tion .btn button:hover {
+    box-shadow: 100px -60px #00095e inset;
+    transition: all 1s ease-in;
+    color: #fff;
+}
+
+.foot {
+    background-color: #fff;
+    width: 100%;
+    padding: 30px;
+}
+
+.foot .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.foot .row .col img {
+    width: 130px;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.foot .row .col h2 {
+    color: #232F55;
+    font-weight: 600;
+    font-family: sans-serif;
+    padding: 10px 0;
+}
+
+.foot .row .col h4 {
+    padding: 20px 0;
+    font-family: sans-serif;
+    color: #232F55;
+    font-weight: 600;
+}
+
+.foot .row .col span {
+    text-decoration: underline;
+    color: #0c0c1f;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+.foot .row .col h3 {
+    color: #232F55;
+    font-family: sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    padding: 3px 0;
+}
+
+.foot .row .col ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.foot .row .col ul li {
+    list-style: none;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    font-family: sans-serif;
+}
+
+.foot .row .col ul li a {
+    text-decoration: none;
+    color: #232F55;
+}
+
+.foot .row .col ul li a:hover {
+    transition: 5s ease-in;
+    text-decoration: underline;
+}
+
+.foot .row .col input {
+    width: 300px;
+    padding: 15px;
+    border: 1px solid #00095e;
+    color: #00095e;
+    background-color: transparent;
+    border-radius: 30px;
+    outline: none;
+    font-family: sans-serif;
+}
+
+.foot .row .col i {
+    position: absolute;
+    right: 35px;
+    padding-top: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.foot .info {
+    text-align: center;
+    position: relative;
+}
+
+.foot .info i {
+    color: #FF4495;
+    cursor: pointer;
+}
+
+.foot .info h4 {
+    color: #232F55;
+    font-family: sans-serif;
+    padding: 20px;
+    font-weight: 300;
+}
+
+.foot .info span {
+    color: #FF4495;
+    font-family: sans-serif;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 @keyframes bg {

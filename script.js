@@ -68,3 +68,12 @@ quote.addEventListener('click', () => {
 
 
 })
+
+
+
+const bTn = document.querySelector('#bTn');
+
+bTn.addEventListener('click', () => {
+    let text = "Started";
+    bTn.textContent = text;
+})
