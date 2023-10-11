@@ -9,6 +9,138 @@ html {
     padding: 0;
 }
 
+
+/* 
+Burger
+*/
+
+.burger {
+    display: none;
+    position: relative;
+    z-index: 5;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+    background: black;
+    z-index: -1;
+}
+
+#main-menu {
+    display: block;
+    height: 100px;
+    width: 100%;
+    background: #3D0E61;
+    margin: 0px;
+    z-index: 9;
+}
+
+#main-menu ul {
+    max-width: 800px;
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    padding: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 9;
+}
+
+#main-menu li {
+    list-style-type: none;
+    font-size: 2rem;
+}
+
+#main-menu a {
+    color: #B9FAF8;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+#main-menu a:hover {
+    text-decoration: underline;
+}
+
+#hamburger-input {
+    display: none;
+}
+
+#hamburger-menu {
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    display: block;
+    right: 20px;
+    width: 40px;
+    z-index: 9;
+    height: 40px;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Cabin', Sans-serif;
+    background: linear-gradient( to bottom, #fff, #fff 20%, transparent 20%, transparent 40%, #fff 40%, #fff 60%, transparent 60%, transparent 80%, #fff 80%, #fff 100%);
+}
+
+#hamburger-menu #sidebar-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 200px;
+    height: 100%;
+    background-color: #00095e;
+    transition: 0.3s;
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+
+#hamburger-menu h3 {
+    color: #222222;
+    font-size: 2.2rem;
+}
+
+#hamburger-menu ul {
+    padding-left: 0px;
+}
+
+#hamburger-menu li {
+    list-style-type: none;
+    line-height: 3rem;
+}
+
+#hamburger-menu a {
+    color: #fff;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+#hamburger-menu a:hover {
+    text-decoration: underline;
+}
+
+#hamburger-input:checked+#hamburger-menu #sidebar-menu {
+    visibility: visible;
+    left: 0;
+}
+
+#hamburger-input:checked~.overlay {
+    visibility: visible;
+    opacity: 0.4;
+}
+
+
+/*
+Burger
+*/
+
 @keyframes easy {
     from {
         opacity: 0.3;
@@ -162,7 +294,7 @@ html {
 
 .container .next-row .next-col h1 {
     color: #fff;
-    font-family: cursive;
+    font-family: sans-serif;
     text-transform: uppercase;
     font-size: 40px;
     position: relative;
@@ -180,7 +312,7 @@ html {
 
 .container .info p {
     color: #fff;
-    font-family: cursive;
+    font-family: sans-serif;
     font-weight: 600;
     font-size: 14px;
     text-transform: uppercase;
@@ -200,7 +332,7 @@ html {
     padding: 16px;
     overflow: hidden;
     color: #fff;
-    font-family: cursive;
+    font-family: sans-serif;
     cursor: pointer;
     font-weight: 700;
     text-transform: uppercase;
@@ -1027,11 +1159,6 @@ html {
     position: relative;
 }
 
-.foot .info i {
-    color: #FF4495;
-    cursor: pointer;
-}
-
 .foot .info h4 {
     color: #232F55;
     font-family: sans-serif;
@@ -1039,11 +1166,18 @@ html {
     font-weight: 300;
 }
 
+.foot .info img {
+    width: 100px;
+    right: 5px;
+    top: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
 .foot .info span {
     color: #FF4495;
-    font-family: sans-serif;
-    font-weight: 600;
     cursor: pointer;
+    font-family: sans-serif;
 }
 
 @keyframes bg {
@@ -1054,5 +1188,568 @@ html {
     51%,
     100% {
         transition: 5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+}
+
+
+/* media epar */
+
+@media (max-width:650px) {
+    body,
+    html {
+        overflow-x: hidden;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .burger {
+        display: block;
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .container header .row {
+        display: none;
+    }
+    .container .row .col button {
+        display: none;
+    }
+    .container header .row .col img {
+        display: block;
+    }
+    .container .next-row .next-col img {
+        top: 0;
+    }
+    .container .next-row .next-col h1 {
+        font-size: 13px;
+        top: 60px;
+        left: 0;
+    }
+    .container .info {
+        top: 100px;
+        left: 0;
+    }
+    .container .info p {
+        font-size: 8px;
+    }
+    .container .btn {
+        bottom: 5px;
+        top: 140px;
+        left: 0;
+    }
+    .container .btn button {
+        text-transform: none;
+        padding: 8px;
+        width: 112px;
+    }
+    .blog {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .blog .info {
+        padding: 0;
+    }
+    .blog .info h1 {
+        font-size: 16px;
+    }
+    .blog .row .col .img {
+        left: 0;
+    }
+    .blog .row {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .blog .row .col p {
+        font-size: 17px;
+    }
+    .blog .row .col h1 {
+        font-size: 19px;
+    }
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .wrapper .row {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .wrapper .row .col h1 {
+        text-align: center;
+        font-size: 28px;
+    }
+    .wrapper .row .col .img {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        align-items: center;
+    }
+    .wrapper .row .col h3 {
+        padding: 0;
+        text-align: center;
+    }
+    .wrapper-1 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .wrapper-1 .row {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .wrapper-1 .row .col h1 {
+        font-size: 18px;
+    }
+    .wrapper-1 .row .col h4 {
+        padding: 20px 0;
+    }
+    .wrapper-1 .next-row {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .wrapper-1 .next-row .next-col {
+        aspect-ratio: 9/4;
+    }
+    .wrapper-1 .info h2 {
+        font-size: 9px;
+    }
+    .wrapper-1 .info h2:hover {
+        transition: .5s ease-in;
+        font-size: 9px;
+    }
+    .wrapper-1 .info span {
+        font-size: 9px;
+    }
+    .wrapper-1 .info span:hover {
+        transition: .5s ease-in;
+        font-size: 9px;
+    }
+    .wrapper-2 .info h1 {
+        font-size: 18px;
+    }
+    .wrapper-2 .row {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .wrapper-2 .row .col h2 {
+        font-size: 12px;
+    }
+    .wrapper-2 .row .col h1 {
+        font-size: 39px;
+    }
+    .wrapper-2 .btn button {
+        width: 158px;
+    }
+    .portfolio {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .portfolio .content {
+        padding: 20px;
+    }
+    .portfolio .content h1 {
+        font-size: 26px;
+    }
+    .portfolio .row {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .portfolio .row .col .imgg span {
+        left: 156px;
+    }
+    .portfolio .row .col .img span {
+        left: 156px;
+    }
+    .portfolio .row .col .imga span {
+        left: 156px;
+    }
+    .portfolio .row .col h1 {
+        font-size: 13px;
+        text-align: center;
+    }
+    .sec-tion {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .sec-tion .circle-button i {
+        left: 28.6%;
+    }
+    .sec-tion .info h1 {
+        font-size: 21px;
+    }
+    .sec-tion .btn {
+        padding: 50px 0;
+    }
+    .sec-tion .btn button {
+        width: 170px;
+    }
+    .foot {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .foot .row {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .foot .row .col h3 {
+        font-size: 13px;
+    }
+    .foot .row .col h2 {
+        font-size: 16px;
+    }
+    .foot .row .col h4 {
+        text-align: start;
+    }
+    .foot .row .col .news {
+        text-align: center;
+    }
+    .foot .row .col .subscribe {
+        display: none;
+    }
+    .foot .row .col i {
+        right: 15px;
+    }
+    .foot .row .col input {
+        width: 190px;
+    }
+    .foot .info {
+        display: none;
+    }
+}
+
+
+/* media e par */
+
+
+/* media e dyt */
+
+@media (651px <=width <=897px) {
+    body,
+    html {
+        overflow-x: hidden;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .burger {
+        display: block;
+    }
+    .container header .row {
+        display: none;
+    }
+    .container .row .col button {
+        display: none;
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .container .next-row .next-col img {
+        top: 13px;
+    }
+    .container .next-row .next-col h1 {
+        top: 200px;
+        left: 20px;
+        font-size: 30px;
+    }
+    .container .info {
+        top: 290px;
+        left: 20px;
+    }
+    .container .btn {
+        left: 14px;
+        top: 350px;
+    }
+    .blog {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .blog .row {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .wrapper .row {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .wrapper .row .col h1 {
+        font-size: 31px;
+    }
+    .wrapper-1 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .wrapper-1 .row {
+        display: flex;
+        flex-direction: column;
+    }
+    .wrapper-1 .row .col h4 {
+        font-size: 18px;
+    }
+    .wrapper-1 .next-row {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .wrapper-1 .next-row .next-col {
+        aspect-ratio: 9/4;
+    }
+    .wrapper-2 {
+        width: 100%;
+        height: 100%;
+    }
+    .wrapper-2 .info p {
+        font-size: 13px;
+    }
+    .wrapper-2 .row {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .portfolio {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .portfolio .row {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .sec-tion {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .sec-tion .circle-button i {
+        left: 41.6%;
+    }
+    .foot {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .foot .row {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        align-items: start;
+    }
+    .foot .row .col i {
+        right: 0;
+        left: 350px;
+    }
+}
+
+
+/* media e dyt */
+
+
+/* media e tret */
+
+@media (898px <=width <=1024px) {
+    body,
+    html {
+        overflow-x: hidden;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .blog {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .blog .row .col .img {
+        left: 26%;
+    }
+    .blog .row .col {
+        aspect-ratio: 9/4;
+    }
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .wrapper .row .col .info {
+        padding: 10px 0;
+    }
+    .portfolio {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .portfolio .row .col .img span {
+        left: 155px;
+    }
+    .portfolio .row .col .imgg span {
+        left: 155px;
+    }
+    .portfolio .row .col .imga span {
+        left: 155px;
+    }
+    .portfolio .row .col h1 {
+        font-size: 18px;
+    }
+    .portfolio .row .col {
+        padding: 20px 0;
+    }
+    .portfolio .row {
+        column-gap: 20px;
+    }
+    .sec-tion {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .sec-tion .circle-button i {
+        left: 45.6%;
+    }
+    .foot {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .foot .row .col {
+        column-gap: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .foot .row .col {
+        padding: 20px 20px;
+    }
+    .foot .row .col i {
+        padding-top: 170px;
+        right: 120px;
+    }
+}
+
+
+/* media e tret */
+
+
+/* media e parafundit */
+
+@media (1025px <=width <=1241px) {
+    body,
+    html {
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .blog {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .wrapper-2 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .portfolio {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .foot {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .wrapper-1 .next-row .next-col {
+        aspect-ratio: 5/4;
+    }
+}
+
+
+/* media e parafundit */
+
+@media only screen and (min-width:1241px) {
+    body,
+    html {
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .blog {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .wrapper-2 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .portfolio {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .foot {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }

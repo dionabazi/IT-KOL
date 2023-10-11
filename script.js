@@ -77,3 +77,16 @@ bTn.addEventListener('click', () => {
     let text = "Started";
     bTn.textContent = text;
 })
+const Services = document.querySelector('#Services');
+
+Services.addEventListener('click', () => {
+    let text = "Serviced";
+    Services.textContent = text;
+})
+
+const learn = document.querySelector('#learn');
+
+learn.addEventListener('click', () => {
+    let text = "Learned";
+    learn.textContent = text;
+})
